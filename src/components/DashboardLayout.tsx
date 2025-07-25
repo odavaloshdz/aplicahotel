@@ -81,7 +81,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         sidebarOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="flex items-center justify-between h-16 px-4 border-b">
-          <div className="text-xl font-bold text-gray-800">TEKNOBITS</div>
+          <div className="text-xl font-bold text-gray-800">AplicaHotel</div>
           <Button
             variant="ghost"
             size="sm"
@@ -124,7 +124,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
         <div className="p-4 border-t">
           <div className="text-xs text-gray-500 text-center">
-            © Propiedad de Teknobits 2025
+            © Propiedad de AplicaHotel 2025
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TEKNOBITS - Hotel Management System",
+  title: "AplicaHotel - Hotel Management System",
   description: "Sistema de gestión hotelera multi-empresa",
 };
 

@@ -123,16 +123,16 @@ export default function Sidebar({
         <Link href="/dashboard">
           <div className="flex items-center">
             <img
-              src="/teknobits-logo.png"
-              alt="Teknobits Logo"
+              src="/aplicahotel-logo.png"
+              alt="AplicaHotel Logo"
               className="h-8 w-auto"
               onError={(e) => {
                 e.currentTarget.src =
-                  "https://api.dicebear.com/7.x/avataaars/svg?seed=teknobits";
+                  "https://api.dicebear.com/7.x/avataaars/svg?seed=aplicahotel";
               }}
             />
             <span className="ml-2 text-lg font-semibold text-gray-800">
-              Teknobits
+              AplicaHotel
             </span>
           </div>
         </Link>

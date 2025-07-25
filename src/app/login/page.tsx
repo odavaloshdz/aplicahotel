@@ -39,7 +39,7 @@ export default function LoginPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <div className="flex items-center justify-center mb-4">
-            <div className="text-2xl font-bold text-gray-800">TEKNOBITS</div>
+            <div className="text-2xl font-bold text-gray-800">AplicaHotel</div>
           </div>
           <CardTitle>Iniciar Sesión</CardTitle>
           <CardDescription>

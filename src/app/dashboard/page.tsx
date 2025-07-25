@@ -19,7 +19,6 @@ import {
   PieChart,
   Users,
 } from "lucide-react";
-import Sidebar from "@/components/dashboard/Sidebar";
 
 export default function DashboardPage() {
   // Mock data for dashboard statistics
@@ -92,7 +91,6 @@ export default function DashboardPage() {
 
   return (
     <div className="flex h-screen bg-background">
-      <Sidebar />
       <div className="flex-1 overflow-auto p-6">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-3xl font-bold">Dashboard</h1>
