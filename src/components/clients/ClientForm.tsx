@@ -55,6 +55,7 @@ interface ClientFormProps {
   onSubmit?: (data: ClientFormValues) => void;
   initialData?: Partial<ClientFormValues>;
   isDialog?: boolean;
+  client?: any;
 }
 
 export default function ClientForm({
@@ -63,21 +64,34 @@ export default function ClientForm({
   onSubmit,
   initialData = {},
   isDialog = true,
+  client,
 }: ClientFormProps) {
+  // Si client está presente, usarlo como fuente de datos iniciales
+  const clientData = client ? {
+    nombre: client.name?.split(' ')[0] || '',
+    apellidos: client.name?.split(' ').slice(1).join(' ') || '',
+    tipoCliente: client.type || '',
+    direccion: '',
+    ciudad: client.city || '',
+    estado: client.state || '',
+    telefonoCelular: client.phone || '',
+    telefonoCasa: '',
+    correoElectronico: client.email || '',
+  } : initialData;
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<ClientFormValues>({
     resolver: zodResolver(clientSchema),
     defaultValues: {
-      nombre: initialData.nombre || "",
-      apellidos: initialData.apellidos || "",
-      tipoCliente: initialData.tipoCliente || "",
-      direccion: initialData.direccion || "",
-      ciudad: initialData.ciudad || "",
-      estado: initialData.estado || "",
-      telefonoCelular: initialData.telefonoCelular || "",
-      telefonoCasa: initialData.telefonoCasa || "",
-      correoElectronico: initialData.correoElectronico || "",
+      nombre: clientData.nombre || "",
+      apellidos: clientData.apellidos || "",
+      tipoCliente: clientData.tipoCliente || "",
+      direccion: clientData.direccion || "",
+      ciudad: clientData.ciudad || "",
+      estado: clientData.estado || "",
+      telefonoCelular: clientData.telefonoCelular || "",
+      telefonoCasa: clientData.telefonoCasa || "",
+      correoElectronico: clientData.correoElectronico || "",
     },
   });
 

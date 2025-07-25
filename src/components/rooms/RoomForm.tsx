@@ -26,6 +26,7 @@ interface RoomFormProps {
   onSubmit?: (data: RoomData) => void;
   initialData?: RoomData;
   isEditing?: boolean;
+  room?: any;
 }
 
 interface RoomData {
@@ -51,8 +52,10 @@ const RoomForm = ({
     packageType: "basic",
   },
   isEditing = false,
+  room,
 }: RoomFormProps) => {
-  const [formData, setFormData] = useState<RoomData>(initialData);
+  const roomData = room || initialData;
+  const [formData, setFormData] = useState<RoomData>(roomData);
 
   const handleChange = (field: keyof RoomData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));

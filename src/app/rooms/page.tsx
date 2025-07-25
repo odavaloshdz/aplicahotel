@@ -105,7 +105,7 @@ export default function RoomsPage() {
     },
   ];
 
-  const handleEditRoom = (room) => {
+  const handleEditRoom = (room: any) => {
     setSelectedRoom(room);
     setIsEditRoomOpen(true);
   };
