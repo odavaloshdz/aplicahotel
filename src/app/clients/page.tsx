@@ -97,7 +97,7 @@ export default function ClientsPage() {
     },
   ];
 
-  const handleEditClient = (client) => {
+  const handleEditClient = (client: any) => {
     setEditingClient(client);
     setIsFormOpen(true);
   };
